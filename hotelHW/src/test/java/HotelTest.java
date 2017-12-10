@@ -63,5 +63,13 @@ public class HotelTest {
         assertEquals ("you are checked in", hotel.CheckIn (singleBedroom1, guest1));
     }
 
+    @Test
+    public void returnListOfEmptyRooms(){
+        SingleBedroom singleBedroom1 = new SingleBedroom (5,22, RoomType.SINGLE, guests);
+        rooms.add(singleBedroom1);
+        assertEquals (singleBedroom1, hotel.listOfEmptyRooms());
+
+    }
+
 
 }
